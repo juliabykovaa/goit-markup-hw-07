@@ -6,8 +6,8 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
     opacity: 1;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity $main-transition,
+        visibility $main-transition;
 }
 
 .is-hidden {
@@ -15,7 +15,6 @@
     opacity: 0;
     pointer-events: none;
 }
-
 
 .modal {
     position: absolute;
@@ -25,45 +24,52 @@
     border-radius: 4px;
     background-color: $primary-white-color;
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform $main-transition;
     padding: 40px;
-    &-form {
-        display: flex;
-        flex-direction: column;
-        text-align: start;
-    }
-    &-input {
-        font-size: 12px;
-        width: 100%;
-        height: 40px;
-        border: 1px solid rgba(33, 33, 33, 0.2);
-        border-radius: 4px;
-        padding-left: 42px;
-        transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        &:last-child {
-            margin-bottom: 20px;
-            height: 120px;
-            padding: 12px 16px;
-        }
-        &:focus {
-            border: 1px solid $accent-color;
-            outline: none;
-        }
-    }
-    
-    &-icon {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 12px;
-        transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);
     }
-
 }
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+     text-align: start;
+}
+    
+.modal-input {
+    font-size: 12px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    padding-left: 42px;
+    transition: border $main-transition;
+    &:last-child {
+        margin-bottom: 20px;
+        height: 120px;
+        padding: 12px 16px;
+    }
+    &:focus {
+        border: 1px solid $accent-color;
+        outline: none;
+    }
+    &::placeholder {
+        font-size: 12px;
+        line-height: 1.166;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+    
+.modal-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 12px;
+    transition: fill $main-transition;
+}
+    
 
 .input-wrapper {
     position: relative;
@@ -80,15 +86,6 @@ textarea {
     resize: none;
     font-size: 12px;
 }
-
-.modal-input::placeholder {
-    font-size: 12px;
-    line-height: 1.166;
-    letter-spacing: 0.01em;
-    color: rgba(117, 117, 117, 0.5);
-
-}
-
 
 .checkbox {
     position: absolute;
@@ -127,14 +124,13 @@ textarea {
 .check-wrapper {
     display: inline-block;
     cursor: pointer;
-    @include centeredFlex;
     margin-bottom: 30px;
     padding-left: 15px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: $secondary-text-color;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: box-shadow $main-transition;
     &:focus {
     outline: none;
     }
@@ -148,9 +144,9 @@ textarea {
     fill: $primary-white-color;
     border: 2px solid $primary-text-color;
     border-radius: 2px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color $main-transition,
+        fill $main-transition,
+        border-color $main-transition;
     .checkbox:checked + & {
             background-color: $accent-color;
             fill: $primary-white-color;
@@ -163,7 +159,7 @@ textarea {
 }
 
 
-.form-title {
+.modal-form__title {
     justify-content: start;
     color: $secondary-text-color;
     font-size: 12px;
@@ -176,56 +172,10 @@ textarea {
     margin-bottom: 30px;
 }
 
-
-.close-button {
-    position: absolute;
-    top: 11px;
-    right: 11px;
-    background-color: $primary-white-color;
-    width: 30px;
-    height: 30px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-    @include centeredFlex;
-    &:focus {
-        outline: none;
-    }
-}
-
-.close-button:hover svg,
-.close-button:focus svg {
-    fill: $accent-color;
-}
-
-
-.send-button {
-    margin-left: auto;
-    margin-right: auto;
-    width: 200px;
-    height: 50px;
-    color: $primary-white-color;
-    background: $accent-color;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-    border-color: transparent;
-    @include font(700, 16px, 1.88, 0.06em);
-    @include centeredFlex;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    cursor: pointer;
-    &:hover,
-    &:focus {
-    background-color: $accent-color-active;
-    outline: none;
-    }
-}
-
-.modal-title {
+.modal__title {
     font-weight: 700;
-    font-style: normal;
     font-size: 20px;
     line-height: 1.15;
     text-align: center;
-    letter-spacing: 0.03em;
     margin-bottom: 12px;
 }

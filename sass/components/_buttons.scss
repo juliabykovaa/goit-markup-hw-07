@@ -1,5 +1,8 @@
 .filter-buttons {
     margin-right: 8px;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 .btn {
@@ -14,9 +17,9 @@
     padding: 6px 22px;
     border-radius: 4px;
     border: 0;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-        box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $main-transition,
+        background-color $main-transition,
+        box-shadow $main-transition;
     &:hover,
     &:focus {
             color: $primary-white-color;
@@ -27,7 +30,66 @@
     }
 }
 
+.hero__button {
+    padding: 10px 32px;
+    min-width: 216px;
+    font-family: inherit;
+    color: $primary-white-color;
+    background-color: $accent-color;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0;
+    transition: background-color $main-transition;
 
-.filter-buttons:last-child {
-    margin-right: 0;
+    &:hover,
+    &:active {
+        background-color: $accent-color-active;
+    }
+}
+
+.close-button {
+    position: absolute;
+    top: 11px;
+    right: 11px;
+    background-color: $primary-white-color;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    @include centeredFlex;
+
+    &:focus {
+        outline: none;
+    }
+
+    &:hover svg,
+    &:focus svg {
+        fill: $accent-color;
+    }
+}
+
+.send-button {
+    @include marginAuto;
+    width: 200px;
+    height: 50px;
+    color: $primary-white-color;
+    background: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-color: transparent;
+    @include font(700, 16px, 1.88, 0.06em);
+    @include centeredFlex;
+    transition: background-color $main-transition;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        background-color: $accent-color-active;
+        outline: none;
+    }
 }

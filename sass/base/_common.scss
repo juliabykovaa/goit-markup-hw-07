@@ -8,7 +8,7 @@ body {
 }
 
 svg {
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $main-transition;
 }
 
 .container {
@@ -49,8 +49,8 @@ svg {
 }
 
 .link {
+    font-style: normal;
     display: block;
-
     color: $primary-text-color;
     font-weight: 500;
     font-size: 14px;
@@ -58,5 +58,5 @@ svg {
     letter-spacing: 0.02em;
     text-decoration: none;
     position: relative;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color $main-transition;
 }

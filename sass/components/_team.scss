@@ -1,17 +1,16 @@
-.team .name {
+.team-member__name {
     font-weight: 500;
     font-size: 16px;
     line-height: 1.9;
+    margin-bottom: 10px;
 }
-
 
 .team {
     background-color: $light-gray-color;
-    margin-left: auto;
-    margin-right: auto;
+    @include marginAuto;
 }
 
-.team .position {
+.team-member__position {
     color: $secondary-text-color;
     font-size: 16px;
     line-height: 1.187;
@@ -23,15 +22,11 @@
     padding-bottom: 30px;
 }
 
-.name {
-    margin-bottom: 10px;
-}
-
 .member-card {
     @include centeredFlex;
 }
 
-.member-card .item {
+.member-card__item {
     width: calc((100% - 90px) / 4);
     margin-right: 30px;
     display: inline-block;
@@ -41,44 +36,42 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
         0px 1px 1px rgba(0, 0, 0, 0.14),
         0px 2px 1px rgba(0, 0, 0, 0.2);
+
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
-.member-card .item:last-child {
-    margin-right: 0;
-}
-
-.team-socials {
+.team-social {
     @include centeredFlex;
 }
 
-.social-item {
+.team-social__item {
     align-items: center;
+    &:not(:first-child) {
+        margin-left: 10px;
+    }
 }
 
-.social-item:not(:first-child) {
-    margin-left: 10px;
-}
-
-.social-link {
+.team-social__link {
     width: 44px;
     height: 44px;
     background: $primary-white-color;
     border-radius: 50%;
     @include centeredFlex;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color $main-transition;
     &:hover,
     &:focus {
             background-color: $accent-color;
-        }
+    }
+    &:hover svg,
+    &:focus svg {
+        fill: $primary-white-color;
+    }
 }
 
-.social-icon {
+.team-social__icon {
     fill: $social-icons-grey;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $main-transition;
 }
 
-
-.social-link:hover svg,
-.social-link:focus svg {
-    fill: $primary-white-color;
-}

@@ -15,61 +15,59 @@
     margin-left: 93px;
     padding-top: 32px;
     padding-bottom: 32px;
-    &-item:not(:first-child) {
+}
+.nav-menu__item:not(:first-child) {
     margin-left: 50px;
-    }
-
-    &-link:hover,
-    &-link:focus,
-    &-current-link {
-        color: $accent-color;
-    }
-
-    &-current-link::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -33px;
-        display: block;
-        width: 100%;
-        height: 4px;
-        background-color: currentColor;
-        border-radius: 2px;
-    }
 }
 
+.nav-menu__link:hover,
+.nav-menu__link:focus,
+.nav-menu__link--current {
+        color: $accent-color;
+}
+
+.nav-menu__link--current::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -33px;
+    display: block;
+    width: 100%;
+    height: 4px;
+    background-color: currentColor;
+    border-radius: 2px;
+}
 
 .contact-menu {
     @include centeredFlex;
     margin-left: auto;
     gap: 30px;
-    &-link {
-        @include centeredFlex;;
-        color: $secondary-text-color;
-        text-decoration: none;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 1.14;
-        letter-spacing: 0.02em;
-        gap: 10px;
-        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    &-link:hover,
-    &-link:focus {
+}
+
+.contact-menu__link {
+    @include centeredFlex;;
+    color: $secondary-text-color;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    gap: 10px;
+    transition: color $main-transition;
+    &:hover,
+    &:focus {
         color: $accent-color;
         svg {
             fill: currentColor;
         }
     }
-    &-link + &-link {
+    & + & {
         margin-left: 50px;
     }
 }
 
-.contact-icon {
+.contact-menu__icon {
     fill: $secondary-text-color;
     align-items: center;
     justify-content: center;
-    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill $main-transition;
 }
 

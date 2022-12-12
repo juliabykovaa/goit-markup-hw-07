@@ -10,3 +10,9 @@
     line-height: $lh;
     letter-spacing: $ls;
 }
+
+@mixin marginAuto {
+    margin-left: auto;
+    margin-right: auto;
+}
+
