@@ -103,7 +103,6 @@ textarea {
 
 .policy-link {
     position: relative;
-    text-decoration: none;
     color: $accent-color;
     &::before {
         content: "";
@@ -128,7 +127,6 @@ textarea {
     padding-left: 15px;
     font-size: 14px;
     line-height: 1.71;
-    letter-spacing: 0.03em;
     color: $secondary-text-color;
     transition: box-shadow $main-transition;
     &:focus {

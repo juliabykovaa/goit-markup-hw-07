@@ -405,7 +405,6 @@ p {
 
 .feature__title {
   font-weight: 700;
-  font-style: normal;
   font-size: 14px;
   line-height: 1.1428;
   margin-bottom: 13px;
@@ -471,8 +470,9 @@ p {
 
 .mail-sub {
   display: flex;
-  margin-left: auto;
   align-items: center;
+  justify-content: center;
+  margin-left: auto;
   gap: 12px;
 }
 
@@ -494,17 +494,16 @@ p {
 
 .mail-sub__link {
   display: flex;
+  align-items: center;
+  justify-content: center;
   width: 200px;
   height: 50px;
-  font-style: normal;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
   color: #FFFFFF;
   text-decoration: none;
   letter-spacing: 0.06em;
-  align-items: center;
-  justify-content: center;
   gap: 12px;
   background-color: #2196F3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -517,6 +516,7 @@ p {
 
 .mail-sub__icon {
   fill: #FFFFFF;
+  display: flex;
   align-items: center;
   justify-content: center;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -635,7 +635,6 @@ textarea {
 
 .policy-link {
   position: relative;
-  text-decoration: none;
   color: #2196F3;
 }
 .policy-link::before {
@@ -659,7 +658,6 @@ textarea {
   padding-left: 15px;
   font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
   color: #757575;
   transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
