@@ -51,6 +51,7 @@
 
 .mail-sub__icon {
     fill: $primary-white-color;
-    @include centeredFlex;
+    align-items: center;
+    justify-content: center;
     transition: fill $main-transition;
 }

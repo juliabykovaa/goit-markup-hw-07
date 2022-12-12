@@ -6,11 +6,8 @@
 .address__link {
     display: inline-block;
     color: $white-color-60transp;
-    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
-    text-decoration: none;
-    letter-spacing: 0.03em;
     transition: color $main-transition;
     &:hover,
     &:focus {
