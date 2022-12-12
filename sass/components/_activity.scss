@@ -1,0 +1,44 @@
+.activity {
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section.activity {
+    padding-top: 0;
+}
+
+.activity-title {
+    margin-bottom: 50px;
+    padding-top: 0;
+}
+
+.act-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.act-list .item {
+    margin-right: 30px;
+    position: relative;
+}
+
+.act-list .item:last-child {
+    margin-right: 0;
+}
+
+.act-text {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(47, 48, 58, 0.8);
+    color: $primary-white-color;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-transform: uppercase;
+}

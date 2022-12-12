@@ -1,0 +1,65 @@
+.mail-sub {
+    display: flex;
+    display: inline-block;
+    margin-left: auto;
+    align-items: end;
+}
+
+.mail-links {
+    display: flex;
+    margin-left: auto;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.mail-input {
+    display: flex;
+    width: 358px;
+    height: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    background-color: transparent;
+    padding-left: 16px;
+    color: $white-color-60transp;
+}
+
+.mail-input:focus {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none;
+}
+
+.mail-link {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 30px;
+    color: $primary-white-color;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background-color: $accent-color;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mail-link:hover,
+.mail-link:focus {
+    background-color: $accent-color-active;
+
+}
+
+
+.mail-icon {
+    fill: $primary-white-color;
+    align-items: center;
+    justify-content: center;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}

@@ -1,0 +1,84 @@
+.team .name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.9;
+}
+
+
+.team {
+    background-color: $light-gray-color;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team .position {
+    color: $secondary-text-color;
+    font-size: 16px;
+    line-height: 1.187;
+    margin-bottom: 16px;
+}
+
+.team-member {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.name {
+    margin-bottom: 10px;
+}
+
+.member-card {
+    @include centeredFlex;
+}
+
+.member-card .item {
+    width: calc((100% - 90px) / 4);
+    margin-right: 30px;
+    display: inline-block;
+    background-color: $primary-white-color;
+    border-radius: 0px 0px 4px 4px;
+    text-align: center;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+        0px 1px 1px rgba(0, 0, 0, 0.14),
+        0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.member-card .item:last-child {
+    margin-right: 0;
+}
+
+.team-socials {
+    @include centeredFlex;
+}
+
+.social-item {
+    align-items: center;
+}
+
+.social-item:not(:first-child) {
+    margin-left: 10px;
+}
+
+.social-link {
+    width: 44px;
+    height: 44px;
+    background: $primary-white-color;
+    border-radius: 50%;
+    @include centeredFlex;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:hover,
+    &:focus {
+            background-color: $accent-color;
+        }
+}
+
+.social-icon {
+    fill: $social-icons-grey;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+.social-link:hover svg,
+.social-link:focus svg {
+    fill: $primary-white-color;
+}
