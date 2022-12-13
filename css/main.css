@@ -90,7 +90,6 @@ a {
   display: flex;
   align-items: center;
   justify-content: start;
-  position: relative;
 }
 
 .nav-menu {
@@ -104,18 +103,19 @@ a {
   margin-left: 50px;
 }
 
-.nav-menu__link:hover,
-.nav-menu__link:focus,
-.nav-menu__link--current {
-  color: #2196F3;
-}
-
 .nav-menu__link {
+  color: #212121;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   position: relative;
+}
+
+.nav-menu__link:hover,
+.nav-menu__link:focus,
+.nav-menu__link--current {
+  color: #2196F3;
 }
 
 .nav-menu__link--current::after {
