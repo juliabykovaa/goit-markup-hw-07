@@ -7,7 +7,7 @@
 
 .team {
     background-color: $light-gray-color;
-    @include marginAuto;
+    @extend %marginAuto;
 }
 
 .team-member__position {

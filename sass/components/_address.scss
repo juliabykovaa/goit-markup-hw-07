@@ -4,11 +4,15 @@
 }
 
 .address__link {
+    text-decoration: none;
     display: inline-block;
     color: $white-color-60transp;
+    font-weight: 400;
     font-size: 14px;
     line-height: 1.71;
+    letter-spacing: 0.03em;
     transition: color $main-transition;
+    
     &:hover,
     &:focus {
         color: $accent-color;

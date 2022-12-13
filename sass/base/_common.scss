@@ -12,15 +12,13 @@ svg {
 }
 
 .container {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1200px;
+    @extend %marginAuto;
+    max-width: 1200px;
     padding: 0 15px;
 }
 
 .section {
-    padding-top: 94px;
-    padding-bottom: 94px
+    @extend %section;
 }
 
 .section-title {
@@ -49,14 +47,8 @@ svg {
 }
 
 .link {
-    font-style: normal;
     display: block;
-    color: $primary-text-color;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
     text-decoration: none;
-    position: relative;
     transition: color $main-transition;
 }
+    

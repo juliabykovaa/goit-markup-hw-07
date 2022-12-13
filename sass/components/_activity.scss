@@ -1,6 +1,6 @@
 .activity {
     align-items: center;
-    @include marginAuto;
+    @extend %marginAuto;
 }
 
 .section.activity {
