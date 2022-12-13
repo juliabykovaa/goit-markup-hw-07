@@ -47,6 +47,7 @@ svg {
 }
 
 .link {
+    font-display: none;
     display: block;
     text-decoration: none;
     transition: color $main-transition;
